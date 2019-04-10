@@ -1,0 +1,206 @@
+body {
+	margin: 0;
+	background-color: white;
+}
+h1, h2, h3, h4, h5, h6{
+	font-family: Impact, Charcoal, sans-serif;
+	font-weight: normal;
+	display: inline;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+p {
+	font-family: "Courier New", Courier, monospace;
+	font-weight: normal;
+	display: inline;
+	word-wrap: break-word;
+}
+.heading {
+	margin: 0;
+}
+.placeholder_text {
+	display: block;
+	text-align: center;
+}
+
+#game_list {
+	width: 25vw;
+	height: 100vh;
+	position: absolute;
+	left: 0;
+	/* background-color: antiquewhite; */
+	overflow: auto;
+}
+
+#board {
+	width: 75vw;
+	height: 100vh;
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	left: 25vw;
+	overflow: auto;
+}
+
+#add_match_form {
+	position: fixed;
+	width: 70vmin;
+	height: 40vmin;
+	padding: 5vmin;
+	overflow: auto;
+	left: calc((100vw - 80vmin)/2);
+	top: calc((100vh - 50vmin)/2);
+	background-color: #e9e9e9;
+	border: 1px solid #ccc;
+	z-index: 11;
+}
+#upload_btn, #done_btn {
+	background-color: steelblue;
+	border: 0;
+	padding: 1em;
+	color: #fff;
+	font-weight: bold;
+	position: fixed;
+	bottom: calc((100vh - 40vmin)/2);
+}
+#upload_btn {
+	left: calc((100vw - 70vmin)/2);
+}
+#done_btn {
+	right: calc((100vw - 70vmin)/2);
+}
+#upload_btn:hover, #done_btn:hover {
+	background-color: #666;
+}
+
+
+@media only screen and (max-width: 70vh){
+	/* Change from dimensions in mobile view */
+	#add_match_form {
+		width: 50vmin;
+		height: 70vmin;
+		left: calc((100vw - 60vmin)/2);
+		top: calc((100vh - 80vmin)/2);
+	}
+	#upload_btn {
+		bottom: calc((100vh - 70vmin)/2);
+		left: calc((100vw - 50vmin)/2);
+	}
+	#done_btn {
+		bottom: calc((100vh - 70vmin)/2);
+		right: calc((100vw - 50vmin)/2);
+	}
+}
+
+#game_list_header {
+	background-color: white;
+	position: sticky;
+	height: auto;
+	overflow: auto;
+	padding: 2vmin;
+	top: 0;
+	border: solid #ccc;
+	border-width: 1px 0;
+	z-index: 1;
+	opacity: .9;
+}
+
+#list_control_bar {
+	width: 100%;
+	height: 5vmin;
+	border: 1px solid #ccc;
+}
+
+#games {
+	width: 100%;
+	height: auto;
+	background-color: white;
+}
+
+#add_button {
+	float: right;
+	width: 2em;
+	height: 2em;
+	background-color: white;
+	position: absolute;
+	bottom: 1vmin;
+	right: 2vmin;
+}
+
+.game_card {
+	height: auto;
+	margin: 2vmin 2vmin;
+	background-color: #ddd;
+	padding: .5vmin .5vmin 1vmin;
+	border: 1px solid #aaa;
+	border-radius: .5vmin;
+	padding: 2vmin;
+	display: flow-root;
+	cursor: pointer;
+}
+.players {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+.vs_sign {
+	position: relative;
+	text-align: center;
+}
+.white_player, .black_player {
+	display: block;
+	width: 40%;
+	height: auto;
+	margin: 0;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	position: relative;
+	float: left;
+	text-align: right;
+}
+.white_player {
+	border: solid white;
+	border-width: .25em 0 0 0;
+}
+.black_player {
+	text-align: left;
+	float: right;
+	border: solid black;
+	border-width: .25em 0 0;
+}
+.white_elo, .black_elo {
+	font-size: .8em;
+	display: block;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: normal;
+}
+.round, .event, .venue, .date, .views {
+	display: block;
+	clear: both;
+	margin: 0;
+	text-align: center;
+}
+.eco, .result {
+	font-size: .8em;
+	margin: 0;
+	display: block;
+	width: 50%;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: normal;
+	float: left;
+	text-align: center;
+}
+.result {
+	float: right;
+}
+
+.window_visible {
+	display: block;
+}
+
+.window_invisible {
+	display: none;
+}
