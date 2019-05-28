@@ -1,7 +1,7 @@
 <?php
 include_once 'extract_game_data.php';
 if(isset($_FILES['fileToUpload'])){
-    $target_dir = "/home/mukul/.chessdb/uploads/";
+    $target_dir = "fix me";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
     $uploadOk = 1;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
